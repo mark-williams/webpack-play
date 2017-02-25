@@ -17,32 +17,5 @@
 
     <p>Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
   </div>
-
-  <div class="modal" style="display: none;">
-    <div class="modal-content">
-      <h3>Modal</h3>
-      <p>Please read this...</p>
-      <button id="modal-ok" class="modal-button">OK</button>
-      <button id="modal-cancel" class="modal-button">Cancel</button>
-    </div>
-  </div>
-
-
-  <script type="text/javascript" src="assets/scripts/script.js"></script>
-  <script type="text/javascript">
-    function onModalClosed(result) {
-      console.log('Modal closed: ' + result);
-    }
-
-    function startup() {
-      var modal = new self.Modal();
-
-      var anchors = document.getElementsByTagName('a');
-      for (var i = 0; i < anchors.length; i++) {
-        anchors[i].addEventListener('click', modal.show.bind(null, onModalClosed));
-      }
-    }
-    window.onload = startup;
-  </script>
 </body>
 </html>
