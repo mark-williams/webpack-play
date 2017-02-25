@@ -1,0 +1,27 @@
+{
+  "name": "frontend-boiler",
+  "version": "1.0.0",
+  "description": "frontend boiler (just simple env set up, http server, linting, testing, webpack)",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "test": "npm test"
+  },
+  "keywords": [
+    "frontend"
+  ],
+  "author": "Mark Williams",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^7.1.0",
+    "eslint": "^3.9.0",
+    "eslint-config-airbnb-es5": "^1.1.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
+    "react-scripts": "0.7.0"
+  },
+  "dependencies": {
+    "lodash": "^4.16.6"
+  }
+}

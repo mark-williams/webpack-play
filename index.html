@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sed porttitor lectus nibh</h1>
+    <p><a href="#">Mauris blandit aliquet elit</a>, eget tincidunt nibh pulvinar a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt.</p>
+
+    <p>Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat.</p>
+
+    <p>Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+
+    <p>Sed porttitor lectus nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+
+    <p>Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+  </div>
+
+  <div class="modal" style="display: none;">
+    <div class="modal-content">
+      <h3>Modal</h3>
+      <p>Please read this...</p>
+      <button id="modal-ok" class="modal-button">OK</button>
+      <button id="modal-cancel" class="modal-button">Cancel</button>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="assets/scripts/script.js"></script>
+  <script type="text/javascript">
+    function onModalClosed(result) {
+      console.log('Modal closed: ' + result);
+    }
+
+    function startup() {
+      var modal = new self.Modal();
+
+      var anchors = document.getElementsByTagName('a');
+      for (var i = 0; i < anchors.length; i++) {
+        anchors[i].addEventListener('click', modal.show.bind(null, onModalClosed));
+      }
+    }
+    window.onload = startup;
+  </script>
+</body>
+</html>
