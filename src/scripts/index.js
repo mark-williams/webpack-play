@@ -1,6 +1,11 @@
 import $ from './select';
 
 window.onload = function onLoad() {
-  var ps = $('p');
-  ps.forEach((p) => { p.style.color = '#444488'; });
+  const ps = $('p');
+  for (let i=0; i < ps.length; i++) {
+    ps[i].style.color = '#444488';
+  }
 };
+
+
+
