@@ -14,65 +14,38 @@ describe('select tests', () => {
                 </div>
               </body>
             </html>`;
+
+    const doc = jsDom.jsdom(html);
+    const win = doc.defaultView;
+
+    global.document = doc
+    global.window = win
   });
 
   describe('with container specified', () => {
-    it('should return all elements matching selector', (done) => {
-      jsDom.env(html, (err, window) => {
-        if (err) {
-          throw err;
-        }
-        const eles = $('p', window.document);
-        checkParas(eles);
-
-        done();
-      });
+    it('should return all elements matching selector', () => {
+      const eles = $('p', window.document);
+      checkParas(eles);
     });
 
-    it('should select by class name', (done) => {
-        jsDom.env(html, (err, window) => {
-        if (err) {
-          throw err;
-        }
-
-        const container = $('.container');
-        expect(container[0].id).to.equal('container-id');
-
-        done();
-      });
+    it('should select by class name', () => {
+      const container = $('.container');
+      expect(container[0].id).to.equal('container-id');
     });
 
-    it('should select by class id', (done) => {
-        jsDom.env(html, (err, window) => {
-        if (err) {
-          throw err;
-        }
-
-        const container = $('#container-id');
-        expect(container[0].className).to.equal('container');
-
-        done();
-      });
+    it('should select by class id', () => {
+      const container = $('#container-id');
+      expect(container[0].className).to.equal('container');
     });
   });
 
   describe('with no container specified', () => {
-    // Where no container is specified we need to make the window and document objects available globally
-    it('should return all elements matching selector', (done) => {
-      var doc = jsDom.jsdom(html);
-      var win = doc.defaultView
-
-      global.document = doc
-      global.window = win
-
+    it('should return all elements matching selector', () => {
       const eles = $('p');
       checkParas(eles);
-    
-      done();
     });
   });
 });
-
 
 const checkParas = (paras) => {
   expect(paras.length).to.equal(3);
