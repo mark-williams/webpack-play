@@ -1,5 +1,5 @@
 function $(selector, container) {
-  return (container || document).querySelectorAll(selector);
+  return (container || window.document).querySelectorAll(selector);
 }
 
 export default $;
