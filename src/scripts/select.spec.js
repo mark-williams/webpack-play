@@ -18,8 +18,8 @@ describe('select tests', () => {
     const doc = jsDom.jsdom(html);
     const win = doc.defaultView;
 
-    global.document = doc
-    global.window = win
+    global.document = doc;
+    global.window = win;
   });
 
   describe('with container specified', () => {
