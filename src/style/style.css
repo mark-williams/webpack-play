@@ -1,7 +1,7 @@
 body, html {
   font-family: segoe ui;
   line-height: 1.5;
-  color: hsla(0, 0%, 26%, 1);
+  color: hsla(0, 0%, 90%, 1);
   margin: 0;
   padding: 10px;
 }
@@ -9,6 +9,10 @@ body, html {
 
 .container {
   width: 800px;
+}
+
+.container p.enhanced {
+  color: hsla(0, 0%, 20%, 1);
 }
 
 .container a {
@@ -32,3 +36,5 @@ body, html {
   background-color: #fff;
   padding: 2em;
 }
+
+

@@ -6,6 +6,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  watch: true,
   module: {
     loaders: [
       {
@@ -15,6 +16,12 @@ module.exports = {
         query: {
           presets: ['es2015']
         }
+      }
+    ],
+    rules: [
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
       }
     ]
   }
