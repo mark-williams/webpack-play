@@ -1,5 +1,5 @@
 import $ from './select';
-import style from '../style/style.scss';
+import '../style/style.scss';
 
 window.onload = function onLoad() {
   const ps = $('p');

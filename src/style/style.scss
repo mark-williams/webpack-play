@@ -1,22 +1,26 @@
+@import 'constants';
+
 body, html {
   font-family: segoe ui;
   line-height: 1.5;
-  color: hsla(0, 0%, 40%, 1);
+  color: $main-font-colour;
   margin: 0;
   padding: 10px;
 }
 
 .container {
   width: 800px;
-}
 
-.container p.enhanced {
-  color: hsla(0, 0%, 20%, 1);
-}
+  p {
+    &.enhanced {
+      color: $enhanced-colour;
+    }
+  }
 
-.container a {
-  color: hsla(240, 50%, 50%, 1);
-  text-decoration: none;
+  a {
+    color: $link-colour;
+    text-decoration: none;
+  }
 }
 
 .modal {
